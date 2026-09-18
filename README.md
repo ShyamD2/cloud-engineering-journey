@@ -51,6 +51,7 @@ cloud-engineering-journey/
 
 | Project | What It Is | Tech | Writeup |
 | :--- | :--- | :--- | :--- |
+| **Project J.A.R.V.I.S.** | Cyber-physical autonomous operating system uniting Windows OS automation, mobile touch trackpad, live screen streaming, and voice agent. | Python, FastAPI, WebSockets, Win32, PyAudio, Groq LPU | [GitHub Repo](https://github.com/ShyamD2/project-jarvis) |
 | **Serverless URL Shortener** | Event-driven redirect service that handles link generation, Base62 hashing, and auto-expiring links via DynamoDB TTL. | AWS Lambda, API Gateway, DynamoDB, Python | [Read Notes](./projects/aws-serverless-url-shortener.md) |
 | **Aegis** | A lightweight security compliance scanner that checks AWS environments against CIS benchmarks and auto-remediates open security groups and public S3 buckets. | Python, Boto3, AWS EventBridge, Terraform | [Read Notes](./projects/aegis.md) |
 | **KubeForecast** | A Kubernetes resource optimizer that analyzes Prometheus pod metrics to recommend realistic CPU/memory requests and limits to kill cluster waste. | Kubernetes, Helm, Python, Prometheus | [Read Notes](./projects/kubeforecast.md) |
