@@ -47,6 +47,23 @@ cloud-engineering-journey/
 
 ---
 
+## 🚀 36-Day DevOps & Cloud Engineer Master Plan
+
+> **Structured Zero-Fluff Roadmap: 4.5 Hours/Day • 162 Hours Total • Job-Ready Target**  
+> Full Syllabus & Progress: [36-Day Master Plan Tracker](./devops/36-DAY-DEVOPS-ROADMAP.md)
+
+| Phase | Days | Topic | Status | Links |
+| :--- | :---: | :--- | :---: | :--- |
+| **Phase 1** | Days 1–6 | Basic Python Scripting & Core Data Structures | **DAY 1 COMPLETE** | [Day 1: Filesystem Automation (`file_inspector.py`)](./devops/python-automation/day-01-filesystem/) |
+| **Phase 2A** | Days 7–11 | Linux Internals & OS Diagnostics | Up Next | Filesystem, Permissions, Processes, Services, Cron |
+| **Phase 2B** | Days 12–14 | Computer Networks & Security | Up Next | Subnetting, DNS, Gateway, UFW Firewalls |
+| **Phase 3** | Days 15–22 | Docker Containerization & Kubernetes | Up Next | Multi-stage Docker, Compose, K8s Pods & Deployments |
+| **Phase 4** | Days 23–26 | CI/CD Pipelines & Observability | Up Next | GitHub Actions, Trivy Security, Prometheus & Grafana |
+| **Phase 5** | Days 27–33 | AWS Cloud Architecture & Terraform IaC | Up Next | Multi-tier VPC, ALB, RDS, Terraform Apply & Destroy |
+| **Phase 6** | Days 34–36 | High-Scale System Design & Job Sprint | Up Next | 99.9% High Availability, Resume Polish & Applications |
+
+---
+
 ## 🚀 Projects I've Built / Currently Building
 
 | Project | What It Is | Tech | Writeup |
