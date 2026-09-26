@@ -1,0 +1,10 @@
+2026-09-21 08:03:44 [ERROR] [payment-svc] Failed to connect to Stripe webhook: Connection timed out after 5000ms
+2026-09-21 08:05:22 [ERROR] [database] PostgreSQL query failed: relation 'user_billing_v2' does not exist
+2026-09-21 08:08:19 [ERROR] [auth-service] Invalid signature on JWT bearer token from 10.0.4.18
+2026-09-21 08:10:15 [CRITICAL] [order-engine] Out of memory: Redis cache evicted 420 keys unexpectedly
+2026-09-21 08:12:45 [ERROR] [email-svc] SMTPAuthenticationError: 535 5.7.8 Credentials rejected
+2026-09-21 08:16:30 [ERROR] [ingress] SSL handshake failed for client 203.0.113.88: TLS version unsupported
+2026-09-21 08:18:40 [ERROR] [search-svc] Elasticsearch node cluster status red: 2 unassigned shards
+2026-09-21 08:21:44 [ERROR] [backup-daemon] Snapshot upload to s3://prod-backups/daily failed: Access Denied
+2026-09-21 08:23:50 [CRITICAL] [dns-resolver] Upstream DNS 8.8.8.8 dropped connection; falling back to 1.1.1.1
+2026-09-21 08:24:18 [ERROR] [queue-consumer] SQS message delivery failed: Message exceeded max receive count

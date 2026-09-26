@@ -9,8 +9,8 @@
 
 | Phase | Days | Focus Area | Status |
 | :--- | :--- | :--- | :---: |
-| **Phase 1** | Days 1–6 | Basic Python Scripting & Core Data Structures | **IN PROGRESS (Day 1 Done)** |
-| **Phase 2A** | Days 7–11 | Linux Internals & OS Diagnostics | UPCOMING |
+| **Phase 1** | Days 1–6 | Basic Python Scripting & Core Data Structures | **PHASE 1 COMPLETE (6/6 Days)** |
+| **Phase 2A** | Days 7–11 | Linux Internals & OS Diagnostics | UP NEXT (Day 7) |
 | **Phase 2B** | Days 12–14 | Computer Networks & Security | UPCOMING |
 | **Phase 3** | Days 15–22 | Docker Containerization & Kubernetes Orchestration | UPCOMING |
 | **Phase 4** | Days 23–26 | CI/CD Pipelines & Observability | UPCOMING |
@@ -26,16 +26,26 @@
   - **Script**: [`file_inspector.py`](./python-automation/day-01-filesystem/file_inspector.py) — Directory scanning with `os.listdir()`, size calculation with `os.path.getsize()`, tabular KB formatting.
   - **Warmups**: [`hackerrank_warmups.py`](./python-automation/day-01-filesystem/hackerrank_warmups.py) — Conditionals, division, loops, functions.
   - **Docs**: [Day 1 Walkthrough & Notes](./python-automation/day-01-filesystem/README.md)
-* [ ] **Day 2: Finding Log Errors & File I/O**
-  - Target: `log_error_finder.py` filtering `ERROR` lines to `errors_only.txt`.
-* [ ] **Day 3: Automated Job & File Pruning**
-  - Target: `auto_cleanup.py` removing `.tmp` files older than 2 days via `os.path.getmtime()`.
-* [ ] **Day 4: Basic DSA — Arrays & Lists**
-  - Target: List operations, slicing, IP address filtering, LeetCode #1929.
-* [ ] **Day 5: Basic DSA — Dictionaries & HashMaps**
-  - Target: HTTP status code frequency counter dictionary, LeetCode #217.
-* [ ] **Day 6: Basic DSA — Stacks & Queues**
-  - Target: Bracket validator with stack, request buffer queue with `collections.deque`, LeetCode #20.
+* [x] **Day 2: Finding Log Errors & File I/O**
+  - **Script**: [`log_error_finder.py`](./python-automation/day-02-log-errors/log_error_finder.py) — Safe streaming line-by-line via `with open()`, regex subsystem tags.
+  - **Output**: [`errors_only.txt`](./python-automation/day-02-log-errors/errors_only.txt) — Extracted 10 server incidents.
+  - **Docs**: [Day 2 Walkthrough & Notes](./python-automation/day-02-log-errors/README.md)
+* [x] **Day 3: Automated Job / Cron Script**
+  - **Script**: [`auto_cleanup.py`](./python-automation/day-03-auto-cleanup/auto_cleanup.py) — Mtime-based file lifecycle pruner with `--dry-run` and audit logging.
+  - **Docs**: [Day 3 Walkthrough & Notes](./python-automation/day-03-auto-cleanup/README.md)
+* [x] **Day 4: Basic DSA — Arrays & Lists**
+  - **Script**: [`list_operations.py`](./python-automation/day-04-arrays-lists/list_operations.py) — Fleet management, RFC1918 IP address classifier & log slicing.
+  - **Warmup**: [`leetcode_1929_concatenation.py`](./python-automation/day-04-arrays-lists/leetcode_1929_concatenation.py) — LeetCode #1929 solution.
+  - **Docs**: [Day 4 Walkthrough & Notes](./python-automation/day-04-arrays-lists/README.md)
+* [x] **Day 5: Basic DSA — Dictionaries & HashMaps**
+  - **Script**: [`http_status_counter.py`](./python-automation/day-05-dictionaries-hashmaps/http_status_counter.py) — O(1) HTTP status frequency aggregator & SLO alerting.
+  - **Warmup**: [`leetcode_217_contains_duplicate.py`](./python-automation/day-05-dictionaries-hashmaps/leetcode_217_contains_duplicate.py) — LeetCode #217 solution.
+  - **Docs**: [Day 5 Walkthrough & Notes](./python-automation/day-05-dictionaries-hashmaps/README.md)
+* [x] **Day 6: Basic DSA — Stacks & Queues**
+  - **Script**: [`bracket_validator.py`](./python-automation/day-06-stacks-queues/bracket_validator.py) — LIFO Stack for IaC HCL/JSON syntax linting.
+  - **Buffer**: [`request_buffer.py`](./python-automation/day-06-stacks-queues/request_buffer.py) — FIFO Queue with `collections.deque` and backpressure.
+  - **Warmup**: [`leetcode_20_valid_parentheses.py`](./python-automation/day-06-stacks-queues/leetcode_20_valid_parentheses.py) — LeetCode #20 solution.
+  - **Docs**: [Day 6 Walkthrough & Notes](./python-automation/day-06-stacks-queues/README.md)
 
 ---
 

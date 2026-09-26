@@ -54,8 +54,8 @@ cloud-engineering-journey/
 
 | Phase | Days | Topic | Status | Links |
 | :--- | :---: | :--- | :---: | :--- |
-| **Phase 1** | Days 1–6 | Basic Python Scripting & Core Data Structures | **DAY 1 COMPLETE** | [Day 1: Filesystem Automation (`file_inspector.py`)](./devops/python-automation/day-01-filesystem/) |
-| **Phase 2A** | Days 7–11 | Linux Internals & OS Diagnostics | Up Next | Filesystem, Permissions, Processes, Services, Cron |
+| **Phase 1** | Days 1–6 | Basic Python Scripting & Core Data Structures | **PHASE 1 COMPLETE (6/6 Days)** | [Day 1: Filesystem Automation](./devops/python-automation/day-01-filesystem/) • [Day 2: Log Errors](./devops/python-automation/day-02-log-errors/) • [Day 3: Auto Cleanup](./devops/python-automation/day-03-auto-cleanup/) • [Day 4: Arrays & Lists](./devops/python-automation/day-04-arrays-lists/) • [Day 5: HashMaps](./devops/python-automation/day-05-dictionaries-hashmaps/) • [Day 6: Stacks & Queues](./devops/python-automation/day-06-stacks-queues/) |
+| **Phase 2A** | Days 7–11 | Linux Internals & OS Diagnostics | Up Next (Day 7) | Filesystem, Permissions, Processes, Services, Cron |
 | **Phase 2B** | Days 12–14 | Computer Networks & Security | Up Next | Subnetting, DNS, Gateway, UFW Firewalls |
 | **Phase 3** | Days 15–22 | Docker Containerization & Kubernetes | Up Next | Multi-stage Docker, Compose, K8s Pods & Deployments |
 | **Phase 4** | Days 23–26 | CI/CD Pipelines & Observability | Up Next | GitHub Actions, Trivy Security, Prometheus & Grafana |
