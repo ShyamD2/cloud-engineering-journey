@@ -10,7 +10,7 @@
 | Phase | Days | Focus Area | Status |
 | :--- | :--- | :--- | :---: |
 | **Phase 1** | Days 1–6 | Basic Python Scripting & Core Data Structures | **PHASE 1 COMPLETE (6/6 Days)** |
-| **Phase 2A** | Days 7–11 | Linux Internals & OS Diagnostics | UP NEXT (Day 7) |
+| **Phase 2A** | Days 7–11 | Linux Internals & OS Diagnostics | **IN PROGRESS (Days 7–8 Done)** |
 | **Phase 2B** | Days 12–14 | Computer Networks & Security | UPCOMING |
 | **Phase 3** | Days 15–22 | Docker Containerization & Kubernetes Orchestration | UPCOMING |
 | **Phase 4** | Days 23–26 | CI/CD Pipelines & Observability | UPCOMING |
@@ -50,8 +50,14 @@
 ---
 
 ### Phase 2A: Linux Internals & OS Diagnostics (Days 7–11)
-* [ ] **Day 7: Linux Filesystem Hierarchy** (`/etc`, `/var`, `/proc`, `/dev`, Bandit 0–5)
-* [ ] **Day 8: Permissions & Ownership** (`chmod`, `chown`, octal math, Bandit 6–10)
+* [x] **Day 7: Linux Filesystem Hierarchy**
+  - **Script**: [`inspect_proc.py`](./linux-internals/day-07-filesystem-hierarchy/inspect_proc.py) — Kernel virtual `/proc` inspector (`/proc/meminfo`, `/proc/cpuinfo`, `/proc/loadavg`).
+  - **Wargame**: OverTheWire Bandit Levels 0–5 walkthrough and command logs.
+  - **Docs**: [Day 7 Walkthrough & Notes](./linux-internals/day-07-filesystem-hierarchy/README.md)
+* [x] **Day 8: Permissions & Ownership**
+  - **Script**: [`perm_auditor.py`](./linux-internals/day-08-permissions-ownership/perm_auditor.py) — DAC security auditor (world-writable, SSH 600 key isolation, config execute bits).
+  - **Wargame**: OverTheWire Bandit Levels 6–10 walkthrough and octal math breakdown.
+  - **Docs**: [Day 8 Walkthrough & Notes](./linux-internals/day-08-permissions-ownership/README.md)
 * [ ] **Day 9: Process Management & Signals** (`ps aux`, `top`, `pgrep`, `kill -9`, runaway process killer)
 * [ ] **Day 10: Memory, Disk & Systemd Services** (`free -m`, `df -h`, custom `.service` unit)
 * [ ] **Day 11: Linux Cron Daemon Automation** (System health watchdog script every 15 mins)
