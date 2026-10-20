@@ -1,10 +1,33 @@
 # Project: J.A.R.V.I.S. (AgentOS) — Cyber-Physical Autonomous Operating System
 
+> **Repository:** [github.com/ShyamD2/project-jarvis](https://github.com/ShyamD2/project-jarvis)  
+> **Architecture:** 6-Stage Canonical AgentOS Pipeline & Dual-Channel Ground-Truth Verification  
+> **Status:** 183 Passing Tests (100% Pass Rate) • 0.00% False-Success Invariant  
+> **Technical Dossier:** [JARVIS_Project_Report.pdf](https://shyamd2-portfolio.netlify.app/reports/JARVIS_Project_Report.pdf) (19 Pages • 3.9 MB)
+
+---
+
 ## The Vision & Architecture
 Most AI agent frameworks are limited to text chatbots, mock terminal demos, or brittle browser-only tools. **Project J.A.R.V.I.S.** is a production-grade cyber-physical **AgentOS** that unites:
 1. **Physical World**: Real-time IoT microcontrollers (ESP32 dual-relay controllers, ambient lux sensors, Raspberry Pi gateways).
 2. **Computer World**: Deep native Windows OS automation (Windows UIAutomation Accessibility Tree + Multi-Modal Vision Grounding, persistent ConPTY terminal sessions, Chrome/Edge DevTools CDP).
 3. **Cloud & Mobile Mesh**: AWS cloud infrastructure (EventBridge, S3, SQS, DynamoDB), Telegram 2.0 full ReAct mobile gateway, and Cloudflare HTTPS remote trackpads.
+
+---
+
+## 🏛️ The 6-Stage Canonical Execution Pipeline
+
+Every user request—whether received via voice, REST API, Telegram, or HUD—traverses a deterministic 6-stage lifecycle before any action is confirmed:
+
+```
+[ Ingress & Auth ] ──► [ Schema Validation ] ──► [ Plan Decomposition ]
+                                                         │
+                                                         ▼
+[ Ground-Truth Verification ] ◄── [ Execution ] ◄── [ ActionLease Grant ]
+         │
+         ▼
+[ Invariant Enforced: 0% False Success ]
+```
 
 ---
 
@@ -55,11 +78,13 @@ Most AI agent frameworks are limited to text chatbots, mock terminal demos, or b
   - **98.0% Pass Rate Local** (98/100) / **96.0% Pass Rate on GitHub Actions CI Runner** (96/100)
   - **0.00% False-Success Rate** (Strict Zero-Trust Invariant enforced)
   - **Latency P50**: **5.27 ms** (CI ingress) / **73.99 ms** (Local full pipeline)
-- **100/100 Architectural Category Elevation**:
-  - **Phase 1: Zero-Trust Security** (`SecurityGuardMiddleware`, AST injection defense)
-  - **Phase 2: Production Readiness** (SQLite WAL mode, ACID `MissionControl` persistence)
-  - **Phase 3: Computer Control** (Windows Core Audio COM API `<2ms` zero-focus volume/mute)
-  - **Phase 4: AI & Agent Architecture** (Hierarchical Working Memory, dynamic cost/complexity routing, pre-flight tool schema validation)
-  - **Phase 5: Testing & QA Overhaul** (All 18 core routes tested, subsystem tests, 50-thread WAL chaos tests, persistent EventMesh spooling)
+- **Formal 19-Page Engineering Specification & Verification Dossier**:
+  - Detailed system topology across 5 Single Authorities.
+  - Complete threat model and blast radius matrix.
+  - Verification reports and empirical benchmark distributions.
 
-*Source Code Repository:* [https://github.com/ShyamD2/project-jarvis](https://github.com/ShyamD2/project-jarvis)
+---
+
+## 🔗 Quick Links
+* **Source Code Repository:** [github.com/ShyamD2/project-jarvis](https://github.com/ShyamD2/project-jarvis)
+* **Technical Dossier:** [Download J.A.R.V.I.S. 19-Page Specification Report (PDF)](https://shyamd2-portfolio.netlify.app/reports/JARVIS_Project_Report.pdf)

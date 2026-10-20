@@ -1,6 +1,6 @@
 # Cloud & DevOps Engineering Journey
 
-Hey there! 👋 I'm **Shyam Kumar**, and this repository is where I document my day-to-day journey transitioning into Cloud and DevOps engineering.
+Hey there! 👋 I'm **Shyam Kumar D**, and this repository is where I document my day-to-day journey transitioning into Cloud, DevOps, and Site Reliability Engineering (SRE).
 
 I started this repo on **August 1, 2026**. I got tired of just passively watching tutorials and wanted **undeniable proof of work**. Every single file in this repo comes from real hands-on labs I built, actual terminal commands I ran, errors I broke my head over, and how I resolved them.
 
@@ -27,23 +27,68 @@ cloud-engineering-journey/
 ├── security/               ← Hands-on hardening & benchmark checklists
 │
 └── projects/               ← Deeper writeups on the major projects I'm building
-    ├── aws-serverless-url-shortener.md
-    ├── aegis.md
-    └── kubeforecast.md
+    ├── driftwarden.md                  ← Go 1.24+ AWS 3-Source Drift & GitOps Engine
+    ├── kubeforecast.md                 ← Go K8s Scheduler & FinOps Engine on AWS EKS
+    ├── project-jarvis.md               ← Autonomous Cyber-Physical AgentOS (19-page spec)
+    ├── aegis.md                        ← Autonomous DevSecOps SOAR & S3 WORM Vaults
+    └── aws-serverless-url-shortener.md ← Event-Driven Serverless Data Platform
 ```
 
 * **`daily-log/`**: My daily journal. What I did today, what failed, why it failed, and what I learned from fixing it.
-* **`aws/`, `devops/`, `networking/`, `security/`**: Permanent notes. When I figure out something tricky (like stateless NACL ephemeral ports or Terraform state locking), I write a clean guide here so I never forget it.
+* **`aws/`, `devops/`, `networking/`, `security/`**: Permanent notes. When I figure out something tricky (like stateless NACL ephemeral ports, Terraform state locking, or PreScore scheduler hooks in Go), I write a clean guide here so I never forget it.
 
 ---
 
 ## 🛠️ Tech Stack I Work With
 
-* **Cloud:** AWS (VPC, EC2, IAM, S3, RDS, DynamoDB, Lambda, API Gateway, CloudWatch, SSM)
-* **Infrastructure as Code:** Terraform
-* **Containers & Orchestration:** Docker, Docker Compose, Kubernetes (Kind, kubectl)
-* **CI/CD & Scripting:** GitHub Actions (with AWS OIDC), Bash, Python (Boto3)
-* **Core Skills:** Linux systems administration, TCP/IP networking, DNS troubleshooting, Cloud security & cost optimization
+* **Programming & Systems:** Go 1.24+, Python 3.13, Bash Shell, Linux (Ubuntu/Debian) Systemd internals
+* **Cloud Infrastructure:** AWS (EKS v1.31, EC2, VPC, ALB, Auto Scaling, IAM IRSA, S3, RDS, DynamoDB, Lambda, API Gateway, EventBridge, Step Functions, SQS, KMS, CloudWatch, Athena)
+* **Infrastructure as Code & GitOps:** Terraform (Modular multi-account, S3 remote state, DynamoDB locking), Helm v3, GitOps PR remediation
+* **Containers & Orchestration:** Docker (Distroless multi-stage <25MB), Kubernetes (Custom Go Scheduling Framework plugins, PodDisruptionBudgets, Kind, kubectl)
+* **CI/CD & DevSecOps:** GitHub Actions (with AWS OIDC), Trivy container scanning, Checkov, TFLint, CIS AWS Benchmark v3.0, SEC Rule 17a-4 S3 WORM Object Lock
+* **Observability & Diagnostics:** Prometheus telemetry, Grafana (5 custom cluster dashboards), CloudWatch Logs/Alarms, Linux `/proc` telemetry
+
+---
+
+## 🚀 Flagship Engineering Projects
+
+| Project | What It Is | Tech Stack | Writeup & Reports |
+| :--- | :--- | :--- | :--- |
+| **DriftWarden** | **Three-Source AWS Drift Detection & GitOps Reconciliation Engine.** Correlates Git desired configuration, Terraform remote state, and live AWS reality to eradicate configuration drift, shadow ClickOps resources, and unapplied changes with automated CIS AWS v3.0 auditing and GitOps PR remediation. Packaged in a distroless container `<25MB`. | Go 1.24+, AWS SDK v2, Terraform State, Docker Distroless, CIS AWS v3.0, GitHub Actions | [Read Notes](./projects/driftwarden.md) • [Report (PDF)](https://shyamd2-portfolio.netlify.app/reports/DriftWarden_Project_Report.pdf) • [GitHub](https://github.com/ShyamD2/driftwarden) |
+| **KubeForecast** | **Kubernetes Predictive Scheduling & FinOps Optimization Engine.** Intercepts pod scheduling with a custom Go Scheduling Framework plugin evaluating candidate nodes in `90.35 ns/op`. Implements 75% dynamic waterline bin-packing, hardware soak-tested on live AWS EKS v1.31 with **50.0%–66.7% node reduction** and 5 Grafana dashboards. | Go 1.23, Kubernetes (AWS EKS v1.31), Terraform, Helm v3, Prometheus, Grafana | [Read Notes](./projects/kubeforecast.md) • [18-Page Research Paper (PDF)](https://shyamd2-portfolio.netlify.app/reports/KubeForecast_Project_Report.pdf) • [GitHub](https://github.com/ShyamD2/KubeForecast) |
+| **Project J.A.R.V.I.S. (AgentOS v2.0)** | **Autonomous Cyber-Physical AgentOS.** Unites physical IoT microcontrollers, native Windows computer-use (UIA + Vision + Core Audio COM), and AWS cloud mesh under a 6-stage canonical pipeline. Features dual-channel ground-truth verification, 4-tier blast radius isolation, **183 automated tests (100% pass rate)**, and strict **0.00% false-success rate** on 100-task benchmarks. | Python 3.13, FastAPI, Playwright, Win32 UIAutomation, AWS Boto3, Docker, AsyncIO | [Read Notes](./projects/project-jarvis.md) • [19-Page Specification (PDF)](https://shyamd2-portfolio.netlify.app/reports/JARVIS_Project_Report.pdf) • [GitHub](https://github.com/ShyamD2/project-jarvis) |
+| **Project AEGIS** | **Autonomous Cloud Defense & Active SOAR Fabric on AWS.** Eliminates 45-minute incident triage lag by orchestrating EventBridge, Step Functions, and Lambda to isolate compromised workloads and blacklist rogue IPs via AWS WAFv2 in `<820ms`. Streams immutable forensic trails to SEC Rule 17a-4 S3 WORM vaults with KMS encryption. | AWS Multi-Account, Terraform, EventBridge, Step Functions, S3 WORM, KMS, Checkov | [Read Notes](./projects/aegis.md) • [Dossier (PDF)](https://shyamd2-portfolio.netlify.app/reports/AEGIS_Project_Report.pdf) • [GitHub](https://github.com/ShyamD2/aegis-cloud-security) |
+| **AWS Serverless Platform** | **Event-Driven Serverless URL Shortener & Real-Time Analytics Platform.** Sub-30ms user redirects via HTTP API Gateway, Lambda, and DynamoDB at $0 idle compute cost. Asynchronous click telemetry decoupled via SQS dead-letter queues to partitioned S3 logs queried in-place via Amazon Athena. | AWS Lambda, API Gateway, DynamoDB, SQS, S3, Athena, Terraform, Python | [Read Notes](./projects/aws-serverless-url-shortener.md) • [Dossier (PDF)](https://shyamd2-portfolio.netlify.app/reports/URL_Shortener_Project_Report.pdf) • [GitHub](https://github.com/ShyamD2/aws-cloud-serverless-url-shortener) |
+
+---
+
+## 📑 Formal Engineering Dossiers & Research Reports
+
+All formal architectural specifications and empirical soak-test reports authored during my journey are published and freely accessible:
+
+1. 📄 **[KubeForecast Empirical Research Dossier (18 Pages • 2.6 MB)](https://shyamd2-portfolio.netlify.app/reports/KubeForecast_Project_Report.pdf)**: Mathematical analysis of waterline bin-packing, Score evaluation hooks, and soak tests on AWS EKS c7i-flex.large node fleets.
+2. 📄 **[DriftWarden Engineering Specification Dossier (1.1 MB)](https://shyamd2-portfolio.netlify.app/reports/DriftWarden_Project_Report.pdf)**: Three-source reconciliation engine mechanics, lock-aware S3 state auditing, and CIS v3.0 benchmark algorithms.
+3. 📄 **[Project J.A.R.V.I.S. AgentOS Specification (19 Pages • 3.9 MB)](https://shyamd2-portfolio.netlify.app/reports/JARVIS_Project_Report.pdf)**: 6-stage canonical pipeline lifecycle, dual-channel sensory reality checking, and 100-task empirical reliability benchmarks.
+4. 📄 **[Project AEGIS SOAR Security Dossier (12.8 MB)](https://shyamd2-portfolio.netlify.app/reports/AEGIS_Project_Report.pdf)**: Autonomous threat detection, blast-radius isolation, and SEC Rule 17a-4 immutable WORM vaulting on AWS.
+5. 📄 **[AWS Serverless Platform Architecture Blueprint (10.8 MB)](https://shyamd2-portfolio.netlify.app/reports/URL_Shortener_Project_Report.pdf)**: Event-driven serverless redirect architecture, asynchronous SQS queues, and partitioned Athena SQL query patterns.
+
+---
+
+## 🎓 Verified Certifications & Industry Accreditations
+
+* **AWS Academy Graduate — Cloud Foundations** (Amazon Web Services • Credly Verified)
+* **Linux 100: Fundamentals** (TCM Security • cert_w14v5kck)
+* **Programming 100: Fundamentals** (TCM Security • cert_smzmggl1)
+* **AWS Solution Architect Level-2** (Nminds Academy • Credential 11121329)
+* **DevOps vs. SRE vs. Cloud Engineer vs. Platform Engineer Masterclass** (Scaler Masterclass • Sept 2026)
+* **Master Agentic Engineering & Workflow Automation Masterclass** (Scaler Masterclass • Sept 2026)
+* **The FDE Simulation: Build & Deploy AI in 3 Hours Masterclass** (Scaler Masterclass • Sept 2026)
+* **Careers in AI + Wireless Workshop** (Thiagarajar College of Engineering • TECHVISTA'26)
+* **Mastercard Cybersecurity Simulation** (Mastercard • Forage Verified)
+* **Deloitte Cyber Job Simulation** (Deloitte • Forage Verified)
+* **Deloitte Data Analytics Simulation** (Deloitte • Forage Verified)
+* **Data for Decision Makers Simulation** (BCG X • Forage Verified)
+* **Cloud Computing with Web Development Intern** (Reccsar Pvt. Ltd. • May 2026)
 
 ---
 
@@ -64,25 +109,9 @@ cloud-engineering-journey/
 
 ---
 
-## 🚀 Projects I've Built / Currently Building
+## 🤝 Connect & Interactive SRE Cockpit
 
-| Project | What It Is | Tech | Writeup |
-| :--- | :--- | :--- | :--- |
-| **Project J.A.R.V.I.S. (AgentOS)** | Production-grade autonomous AgentOS uniting physical microcontrollers, native Windows computer-use (UIA + Vision + Core Audio COM), real-time recitation interrupt (<10ms barge-in & clause streaming), mobile Telegram 2.0 ReAct control, local ONNX neural wake-word, and AWS cloud mesh. **100% Green CI on GitHub Actions across 3 continuous integration gates (Linting, Security Guard, Test Suite), 183 automated tests passing, and 96–98% pass rate on 100-task empirical reliability benchmarks.** | Python 3.13, FastAPI, WebSockets, Win32 UIAutomation, Core Audio COM, ONNX openWakeWord, Telegram, SQLite WAL, AWS Boto3, Groq LPU | [Read Notes](./projects/project-jarvis.md) • [GitHub](https://github.com/ShyamD2/project-jarvis) |
-| **Serverless URL Shortener** | Event-driven redirect service that handles link generation, Base62 hashing, and auto-expiring links via DynamoDB TTL. | AWS Lambda, API Gateway, DynamoDB, Python | [Read Notes](./projects/aws-serverless-url-shortener.md) |
-| **Aegis** | A lightweight security compliance scanner that checks AWS environments against CIS benchmarks and auto-remediates open security groups and public S3 buckets. | Python, Boto3, AWS EventBridge, Terraform | [Read Notes](./projects/aegis.md) |
-| **KubeForecast** | A Kubernetes resource optimizer that analyzes Prometheus pod metrics to recommend realistic CPU/memory requests and limits to kill cluster waste. | Kubernetes, Helm, Python, Prometheus | [Read Notes](./projects/kubeforecast.md) |
-
----
-
-## 📖 Quick Links to My Notes
-
-* **AWS:** [EC2 & Storage](./aws/ec2.md) • [VPC Networking](./aws/vpc.md) • [IAM & Policies](./aws/iam.md) • [S3 Storage & Security](./aws/s3.md)
-* **DevOps:** [Terraform Rules of Thumb](./devops/terraform.md) • [Docker & Multi-Stage Builds](./devops/docker.md) • [Kubernetes Basics & Gotchas](./devops/kubernetes.md) • [GitHub Actions & AWS OIDC](./devops/cicd.md)
-* **Networking & Security:** [Core Networking](./networking/fundamentals.md) • [My 5-Step Debugging Workflow](./networking/troubleshooting.md) • [Hands-on Labs](./networking/labs.md) • [Security Checklists](./security/labs.md)
-
----
-
-## 🤝 Connect
-
-If you're also on this journey or have suggestions on how I can improve my architectures, feel free to open an issue or connect with me!
+* **Interactive SRE Portfolio:** [shyamd2-portfolio.netlify.app](https://shyamd2-portfolio.netlify.app)
+* **GitHub Profile:** [github.com/ShyamD2](https://github.com/ShyamD2)
+* **LinkedIn:** [linkedin.com/in/shyam-kumar-d](https://linkedin.com/in/shyam-kumar-d)
+* **Direct Telemetry:** shyamcloud021@gmail.com | +91 7010672248
